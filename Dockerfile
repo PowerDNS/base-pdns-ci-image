@@ -22,7 +22,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     sudo git curl gnupg software-properties-common wget \
     ca-certificates apt-utils build-essential vim \
     iproute2 net-tools iputils-* ifupdown cmake acl \
-    time mariadb-client postgresql-client jq python3 python3-requests python3-venv
+    npm time mariadb-client postgresql-client jq python3 python3-requests python3-venv
 
 # Required for auth-backend gsqlite3 tests
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
