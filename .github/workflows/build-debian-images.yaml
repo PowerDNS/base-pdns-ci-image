@@ -13,13 +13,6 @@ jobs:
       matrix:
         include:
           - image:
-              id: debian-11-pdns-base
-              debian-image-name: python
-              debian-image-tag: 3.13-slim-bullseye
-              clang-version: '13'
-            branch-name: master
-            runner: ubuntu-24.04
-          - image:
               id: debian-12-pdns-base
               debian-image-name: debian
               debian-image-tag: bookworm-slim # python 3.11
@@ -120,8 +113,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - image-id: debian-11-pdns-base
-            branch-name: master
           - image-id: debian-12-pdns-base
             branch-name: master
           - image-id: debian-12-pdns-base
@@ -178,7 +169,6 @@ jobs:
     strategy:
       matrix:
         image-id:
-        - debian-11-pdns-base
         - debian-12-pdns-base
         - debian-13-pdns-base
         - debian-13-pdns-base-py13

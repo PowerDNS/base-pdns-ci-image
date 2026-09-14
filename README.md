@@ -1,6 +1,6 @@
 # Build PDNS base image
 
-Based on Debian Bullseye.
+Based on Debian Trixie.
 
 Clones PDNS public repo (<https://github.com/PowerDNS/>), master branch, and install common packages into a debian container.
 
