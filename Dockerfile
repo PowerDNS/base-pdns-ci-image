@@ -62,7 +62,7 @@ RUN inv install-clang
 RUN inv install-clang-tidy-tools
 RUN inv install-auth-build-deps
 RUN inv install-rec-build-deps
-RUN inv install-dnsdist-build-deps $([ "$(. /etc/os-release && echo $VERSION_CODENAME)" = "bullseye" ] && echo "--skipXDP=True")
+RUN inv install-dnsdist-build-deps
 
 # Copy permissions for /opt and node_modules like Github runner VMs
 RUN sudo chmod 777 /opt /usr/local/bin /usr/share
